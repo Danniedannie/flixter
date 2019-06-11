@@ -24,4 +24,17 @@
 <%= @course.description %>
 </div> 
 </div>
+
+<div class="col-2">
+	<% @course.section.each do |section| %>
+		<div class="section">
+		<%= section.title %> 
+	</div>
+	<% end %>
+</div>
+</div>
+
+
+
+
 </div>

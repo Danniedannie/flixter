@@ -20,7 +20,7 @@ end
 	end 
 
 	helper_method :current_course 
-	def :current_course 
+	def current_course 
 		@current_course ||= course.find(params[:course_id])
 		end 
 

@@ -20,12 +20,10 @@ class Instructor::LessonsController < ApplicationController
 
   helper_method :current_section
   def current_section
-    puts "YOURE IN THE HELPER METHOD"
-    puts (params[:section_id])
     @current_section ||= Section.find(params[:section_id])
   end
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle)
+    params.require(:lesson).permit(:title, :subtitle, :video)
   end
 end

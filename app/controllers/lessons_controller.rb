@@ -11,3 +11,4 @@ before_action :authenticate_user!
 		@current_lesson ||= Lesson.find(params[:id])
 	end
 end
+

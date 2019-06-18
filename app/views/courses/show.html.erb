@@ -1,3 +1,4 @@
+
 <br />
 
 <div class="booyah-box col-10 offset-1">
@@ -50,29 +51,35 @@
 
 <br />
 
-<div class="col-12">
+<div class="col-12"
 	<% @course.sections.each do |section| %>
+  <li>
     <br /><br />
 	<div class="section">
     <h3>
 	<%= section.title %>
     </h3>
     <div class ='row'>
-    <% section.lessons.rank(:row_order).each do |lesson| %>
+    <% section.lessons.rank(:row_order).each do |lesson| %> 
      
         <div class="lessons text-center">
             <br />
     	<%= link_to lesson_path(lesson) do %>
-    <b><%= lesson.title %></b>
+      <li>
+   <b><%= lesson.title %></b> 
     <br />
     <%= lesson.subtitle %>
+  </li>
     <% end %> 
     </div>
-    <% end %> 
+  </li>
+    <% end %>
 </div>
 <br class= 'clear'/>
+</li>
 </div>
 	<% end %>
+</ul>
 </div>
 </div>
 

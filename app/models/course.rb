@@ -8,6 +8,10 @@ class Course < ApplicationRecord
   validates :description, presence: true
   validates :cost, presence: true, numericality: {greater_than_or_equal_to: 0}
   
+  include RankedModel
+
+   ranks :row_order, with_same: :course_id 
+
   def free?
     cost.zero?
   end

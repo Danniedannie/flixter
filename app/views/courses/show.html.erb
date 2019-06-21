@@ -51,14 +51,14 @@
 
 <br />
 
-<div class="col-12"
+<div class="col-12">
 	<% @course.sections.rank(:row_order).each do |section| %>
   <li>
     <br /><br />
 	<div class="section">
-    <h3>
-	<%= section.title %>
-    </h3>
+ 
+    <h2><%= section.title %></h2>
+  
     <div class ='row'>
     <% section.lessons.rank(:row_order).each do |lesson| %> 
      
@@ -69,7 +69,7 @@
    <b><%= lesson.title %></b> 
     <br />
     <%= lesson.subtitle %>
-    
+
   </li>
     <% end %> 
     </div>

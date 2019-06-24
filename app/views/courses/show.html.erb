@@ -3,6 +3,9 @@
 
 <div class="booyah-box col-10 offset-1">
 
+</br>
+</br>
+
 <h1> <%= @course.title %> </h1>
 <br />
 <img src="<%= @course.image.url %>">
@@ -41,15 +44,17 @@
       <% end %>
       <% else %>
       <h3 class="badge badge-info">Sign In To Enroll</h3>
-      <% end %>
-</div> 
+      <% end %> 
+    </div>
 
 <div class= "col-sm-8 col-12">
 <%= @course.description %>
 </div> 
 </div>
 
+
 <br />
+<ul>
 
 <div class="col-12">
 	<% @course.sections.rank(:row_order).each do |section| %>
@@ -61,6 +66,8 @@
   
     <div class ='row'>
     <% section.lessons.rank(:row_order).each do |lesson| %> 
+
+  </li>
      
         <div class="lessons text-center">
             <br />
@@ -70,19 +77,32 @@
     <br />
     <%= lesson.subtitle %>
 
-  </li>
-    <% end %> 
-    </div>
-  </li>
-    <% end %>
-</div>
-<br class= 'clear'/>
+
 </li>
-</div>
+    <% end %>
+    </div> 
+ 
+    <% end %>
+
+<br class= 'clear'/>
+
 	<% end %>
-</ul>
+
+</li>
+</ul> 
 </div>
 </div>
+</div>
+</li>
+
+
+
+
+
+
+
+
+
 
 
 

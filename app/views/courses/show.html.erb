@@ -7,8 +7,10 @@
 </br>
 
 <h1> <%= @course.title %> </h1>
+<hr>
 <br />
 <img src="<%= @course.image.url %>">
+<br />
 <br />
 <div class="row">
 <div class="col-sm-4 col-12 text-center">
@@ -46,11 +48,13 @@
       <h3 class="badge badge-info">Sign In To Enroll</h3>
       <% end %> 
     </div>
+    <hr>
 
 <div class= "col-sm-8 col-12">
 <%= @course.description %>
 </div> 
 </div>
+
 
 
 <br />

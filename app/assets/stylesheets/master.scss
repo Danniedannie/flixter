@@ -176,3 +176,25 @@ ul {
   margin-right: auto;
   width: 50%;
 }
+
+#footer {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgba(36, 32, 33, 0.9);
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  padding: 10px 0px;
+  margin-top: 30px;
+  font-weight: 100;
+  background: image_url('prism.png');
+}
+
+.fab {
+  margin: 4px;
+}
+
+.social a:hover {
+  text-decoration: none;
+}
+
